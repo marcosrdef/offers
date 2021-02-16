@@ -26,7 +26,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Configuration
-@EnableDynamoDBRepositories(basePackages = "com.itau.api.effective")
+@EnableDynamoDBRepositories(basePackages = "com.itau.api.offers")
 public class DynamoDbConfiguration {
 
     @Value("${amazon.dynamodb.endpoint}")
