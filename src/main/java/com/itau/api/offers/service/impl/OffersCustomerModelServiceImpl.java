@@ -29,12 +29,12 @@ public class OffersCustomerModelServiceImpl implements OffersCustomerModelServic
 
     @Override
     public Optional<List<OffersCustomerModel>> findGroupOffersId(OffersRequestDTO offersRequest) {
-        return offersCustomerModelRepository.findGroupOffersId(offersRequest.getGroupOffersId());
+        return offersCustomerModelRepository.findByGroupOffersId(offersRequest.getGroupOffersId());
     }
 
     @Override
     public Optional<List<OffersCustomerModel>> findDocumentId(OffersRequestDTO offersRequest) {
-        return offersCustomerModelRepository.findGroupOffersId(offersRequest.getDocumentId());
+        return offersCustomerModelRepository.findByGroupOffersId(offersRequest.getDocumentId());
     }
 
     @Override
