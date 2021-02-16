@@ -2,7 +2,9 @@ package com.itau.api.offers.service.impl;
 
 import com.itau.api.offers.constants.Constants;
 import com.itau.api.offers.dto.OffersRequestDTO;
+import com.itau.api.offers.dto.OffersResponseDTO;
 import com.itau.api.offers.exception.NotFoundException;
+import com.itau.api.offers.factory.OffersFactory;
 import com.itau.api.offers.model.OffersCustomerModel;
 import com.itau.api.offers.service.OffersCustomerModelService;
 import com.itau.api.offers.service.OffersService;
@@ -15,14 +17,18 @@ import java.util.Optional;
 public class OffersServiceImpl implements OffersService {
 
     private final OffersCustomerModelService offersCustomerModelService;
+    private final OffersFactory offersFactory;
 
-    public OffersServiceImpl(final OffersCustomerModelService offersCustomerModelService) {
+    public OffersServiceImpl(final OffersCustomerModelService offersCustomerModelService,
+                             final OffersFactory offersFactory) {
         this.offersCustomerModelService = offersCustomerModelService;
+        this.offersFactory = offersFactory;
     }
 
     @Override
-    public List<OffersCustomerModel> offers(OffersRequestDTO offersRequest) {
-        return getOffers(offersRequest);
+    public OffersResponseDTO offers(OffersRequestDTO offersRequest) {
+        return offersFactory.convertCustomerOffersToOffersResponse(
+                getOffers(offersRequest));
     }
 
     @Override
