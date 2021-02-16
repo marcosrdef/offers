@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @EnableScan
 public interface OffersCustomerModelRepository extends CrudRepository<OffersCustomerModel, String> {
-    Optional<List<OffersCustomerModel>> findGroupOffersId(String groupOffersId);
+    Optional<List<OffersCustomerModel>> findByGroupOffersId(String groupOffersId);
     Optional<List<OffersCustomerModel>> findByDocumentId(String documentId);
     Optional<OffersCustomerModel> findById(String id);
 }
