@@ -1,0 +1,62 @@
+[
+  {
+    "customerTypeElegible": "4",
+    "status": "ativo",
+    "name": "cartão de crédito black",
+    "description": "cartão de crédito black com isenção mensalidade por 3 meses"
+  },
+  {
+    "customerTypeElegible": "4",
+    "status": "ativo",
+    "name": "consórcio",
+    "description": "consórcio pré aprovado de R$ 150.000,00 taxa 0,59% a.a"
+  },
+  {
+    "customerTypeElegible": "4",
+    "status": "ativo",
+    "name": "financiamento auto",
+    "description": "crédito pré aprovado de R$ 250.000,00 taxa 1,59% a.m"
+  },
+  {
+    "customerTypeElegible": "4",
+    "status": "ativo",
+    "name": "financiamento imbobiliário",
+    "description": "crédito pré aprovado de R$ 550.000,00 taxa 5,59% a.a"
+  },
+  {
+    "customerTypeElegible": "3",
+    "status": "ativo",
+    "name": "cartão de crédito platinum",
+    "description": "cartão de crédito platinum com R$ 15.000,00 de limite com isenção mensalidade por 3 meses"
+  },
+  {
+    "customerTypeElegible": "3",
+    "status": "ativo",
+    "name": "consórcio",
+    "description": "consórcio pré aprovado de R$ 100.000,00 taxa 0,59% a.a"
+  },
+  {
+    "customerTypeElegible": "3",
+    "status": "ativo",
+    "name": "financiamento auto",
+    "description": "crédito pré aprovado de R$ 75.000,00 taxa 1,99% a.m"
+  },
+  {
+    "customerTypeElegible": "2",
+    "status": "ativo",
+    "name": "cartão de crédito gold",
+    "description": "cartão de crédito gold com R$ 5.000,00 de limite com isenção mensalidade por 3 meses"
+  },
+  {
+    "customerTypeElegible": "2",
+    "status": "ativo",
+    "name": "consórcio",
+    "description": "consórcio pré aprovado de R$ 50.000,00 taxa 0,99% a.a"
+  },
+  {
+    "customerTypeElegible": "1",
+    "status": "ativo",
+    "name": "cartão de crédito mastercard",
+    "description": "cartão de crédito mastercard com R$ 1.000,00 de limite com isenção mensalidade por 3 meses"
+  }
+]
