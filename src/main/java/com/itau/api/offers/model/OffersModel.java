@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@DynamoDBTable(tableName = "OffersCustomer")
+@DynamoDBTable(tableName = "Offers")
 @Builder
 public class OffersModel {
     private String id;
