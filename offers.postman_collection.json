@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "2bce9e00-5033-4ba5-abc3-13c08d4cc86f",
+		"name": "offers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "offers consultation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupOffersId\": \"{{trocar_por_id_do_grupo_de_ofertas_retornado_na_solicatacao_de_ofertas}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8093/offers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8093",
+					"path": [
+						"offers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

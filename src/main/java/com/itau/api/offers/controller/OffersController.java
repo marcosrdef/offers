@@ -18,7 +18,7 @@ public class OffersController {
     }
 
     @GetMapping("/offers")
-    public ResponseEntity<OffersResponseDTO> renegociation(
+    public ResponseEntity<OffersResponseDTO> offers(
             @RequestBody final OffersRequestDTO effectiveRequest) {
         return ResponseEntity.ok(offersService.offers(effectiveRequest));
     }
