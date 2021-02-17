@@ -60,7 +60,7 @@ public class OffersServiceImplTest {
         Mockito.when(offersCustomerModelService.findGroupOffersId(request))
                 .thenReturn(Optional.empty());
         assertThrows(NotFoundException.class, () ->{
-            assertNotNull(OffersServiceImpl.offers(request));
+            OffersServiceImpl.offers(request);
         });
     }
 }
