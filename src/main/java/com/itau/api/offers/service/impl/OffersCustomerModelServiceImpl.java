@@ -51,7 +51,7 @@ public class OffersCustomerModelServiceImpl implements OffersCustomerModelServic
     private List<OffersModel> getOffers(OffersRequestDTO offersRequest) {
         Optional<List<OffersModel>> lstOffers = this.offersModelService.findByCustomerTypeElegible(offersRequest.getCustomerType());
         if(lstOffers.isEmpty()) {
-            new NotFoundException(Constants.MSG_NOT_FOUND_OFFERS_CUSTOMER);
+            throw new NotFoundException(Constants.MSG_NOT_FOUND_OFFERS_CUSTOMER);
         }
 
         return lstOffers.get();

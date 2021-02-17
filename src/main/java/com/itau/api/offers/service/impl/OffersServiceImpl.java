@@ -39,7 +39,7 @@ public class OffersServiceImpl implements OffersService {
     private List<OffersCustomerModel> getOffers(OffersRequestDTO offersRequest) {
         Optional<List<OffersCustomerModel>> lstOffers = offersCustomerModelService.findGroupOffersId(offersRequest);
         if (lstOffers.isEmpty()) {
-            new NotFoundException(Constants.MSG_NOT_FOUND_OFFERS);
+            throw new NotFoundException(Constants.MSG_NOT_FOUND_OFFERS);
         }
         return lstOffers.get();
     }
