@@ -1,0 +1,112 @@
+openapi: 3.0.0
+info:
+  description: api responsável por fazer buscar as ofertas geradas para o cliente
+  title: API offers
+  version: 1;2021-02-18
+  contact:
+    email: marcosrdef@gmail.com
+servers:
+  - url: 'http://localhost:8093'
+tags:
+  - name: offers
+    description: customer offers
+paths:
+  /offers:
+    post:
+      operationId: offers
+      summary: 'busca as ofertas geradas para o cliente'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OffersRequestDTO'
+        required: true
+      tags:
+        - offers
+      responses:
+        '200':
+          description: retorna uma lista de ofertas de produtos disponíveis para o cliente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OffersResponseDTO'
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDTO'
+                
+components:
+  schemas:
+    OffersRequestDTO:
+      type: object
+      properties:
+        groupOffersId:
+          type: string
+          description: id do grupo da oferta, gerado no response da api de renegociação (renegociation, endpoint request offers)
+          example: '701e8636-7cad-4569-9816-7228db6bdf96'
+    OffersResponseDTO:
+      type: object
+      properties:
+        offers:
+          type: array
+          description: Lista de ofertas
+          items:
+            $ref: '#/components/schemas/OfferDTO'
+    OfferDTO:
+      type: object
+      properties:
+        id:
+          type: string
+          description: id da oferta gerada para o cliente
+          example: 'bf65b12c-233d-4ff9-983f-8d001033a089'
+        documentId:
+          type: string
+          description: cpf do cliente
+          example: '12768334073'
+        offer:
+          type: string
+          description: nome da oferta
+          example: 'financiamento auto'
+        description:
+          type: string
+          description: descrição da oferta
+          example: 'crédito pré aprovado de R$ 75.000,00 taxa 1,99% a.m'
+        date:
+          type: string
+          description: data que foi gerada a oferta para o cliente
+          example: '2021-02-17T16:52:25.003Z'
+        dateLimit:
+          type: string
+          description: data limite para o cliente utilizar a oferta
+          example: 'Tue May 18 13:52:24 BRT 2021'
+        status:
+          type: string
+          description: status da oferta (1 - ativo, 2 - desativado)
+          example: '1'
+        groupOffersId:
+          type: string
+          description: id do grupo da oferta 
+          example: '701e8636-7cad-4569-9816-7228db6bdf96'
+    ErrorDTO:
+      type: object
+      properties:
+        message:
+          type: string
+          description: mensagem do erro
+          example: 'Not Found'
+        statusCode:
+          type: string
+          description: código do erro
+          example: '404'
+        description:
+          type: string
+          description: descrição do erro
+          example: 'Offer Not Found'
