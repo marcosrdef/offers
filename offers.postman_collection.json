@@ -15,7 +15,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"groupOffersId\": \"{{trocar_por_id_do_grupo_de_ofertas_retornado_na_solicatacao_de_ofertas}}\"\r\n}"
+					"raw": "{\r\n    \"groupOffersId\": \"{{trocar_por_id_do_grupo_de_ofertas_retornado_na_solicatacao_de_ofertas}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
