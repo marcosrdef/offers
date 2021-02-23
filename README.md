@@ -15,7 +15,7 @@ do envio da mensagem no kafka e utilizar no controller de cada projeto
 de ofertas do cliente
 
 endpoint: http://localhost:8093/offers
-Verbo: POST
+Verbo: GET
 
 
 body request:
