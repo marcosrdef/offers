@@ -12,7 +12,7 @@ tags:
     description: customer offers
 paths:
   /offers:
-    get:
+    post:
       operationId: offers
       summary: 'busca as ofertas geradas para o cliente'
       requestBody:
